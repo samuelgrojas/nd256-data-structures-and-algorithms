@@ -21,7 +21,12 @@ def find_files(suffix: str, path: str) -> list[str]:
     list[str]
         A list of file paths that end with the given suffix.
     """
-    pass
+    result = []
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if file.endswith(suffix):
+                result.append(os.path.join(root, file))
+    return result
 
 
 if __name__ == "__main__":
@@ -32,7 +37,13 @@ if __name__ == "__main__":
     # Expected output: ['./testdir/subdir1/a.c', './testdir/subdir3/subsubdir1/b.c', './testdir/subdir5/a.c', './testdir/t1.c']
 
     # Test Case 2
-    pass
+    print("\nTest Case 2: No matching files")
+    result = find_files(".xyz", "./testdir")
+    print(result)
+    # Expected output: []
 
     # Test Case 3
-    pass
+    print("\nTest Case 3: Empty directory")
+    result = find_files(".c", "./emptydir")
+    print(result)
+    # Expected output: []
