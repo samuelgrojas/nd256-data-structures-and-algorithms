@@ -11,3 +11,5 @@ of time and space complexity. If necessary, you can support your explanation
 with code snippets or mathematical formulas. For guidance on how to write 
 formulas in markdown, refer to https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions.
 -->
+
+Se implementa un Trie para almacenar palabras carácter a carácter. Para autocompletar se localiza el nodo del prefijo y se recorren recursivamente sus descendientes para recoger sufijos completos. Tiempo para insertar/búsqueda del prefijo: O(m) con m la longitud de la palabra/prefijo. Espacio: proporcional al total de caracteres almacenados.

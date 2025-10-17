@@ -11,3 +11,5 @@ of time and space complexity. If necessary, you can support your explanation
 with code snippets or mathematical formulas. For guidance on how to write 
 formulas in markdown, refer to https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions.
 -->
+
+Se usa una búsqueda binaria modificada en un arreglo rotado. En cada paso se detecta cuál mitad está ordenada y se decide en cuál continuar. Complejidad temporal: O(log n). Complejidad espacial: O(1).

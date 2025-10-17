@@ -28,7 +28,32 @@ def rearrange_digits(input_list: list[int]) -> tuple[int, int]:
     tuple[int, int]: A tuple containing two integers formed by rearranging the 
     digits of the input list.
     """
-    pass
+    if not input_list:
+        return 0, 0
+
+    # Quick sort (descending) to avoid using built-in sort
+    def quicksort_desc(arr):
+        if len(arr) <= 1:
+            return arr[:]
+        pivot = arr[len(arr) // 2]
+        left = [x for x in arr if x > pivot]
+        mid = [x for x in arr if x == pivot]
+        right = [x for x in arr if x < pivot]
+        return quicksort_desc(left) + mid + quicksort_desc(right)
+
+    sorted_list = quicksort_desc(input_list)
+
+    num1_digits = []
+    num2_digits = []
+    for i, d in enumerate(sorted_list):
+        if i % 2 == 0:
+            num1_digits.append(str(abs(d)))
+        else:
+            num2_digits.append(str(abs(d)))
+
+    num1 = int("".join(num1_digits)) if num1_digits else 0
+    num2 = int("".join(num2_digits)) if num2_digits else 0
+    return num1, num2
 
 def test_function(test_case: tuple[list[int], list[int]]) -> None:
     """

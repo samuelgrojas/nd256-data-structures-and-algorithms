@@ -11,3 +11,5 @@ of time and space complexity. If necessary, you can support your explanation
 with code snippets or mathematical formulas. For guidance on how to write 
 formulas in markdown, refer to https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions.
 -->
+
+La solución usa búsqueda binaria para calcular la raíz entera floored. La idea es mantener un intervalo [l, r] y reducirlo según si el cuadrado del punto medio es mayor o menor que el número. Complejidad temporal: O(log n). Complejidad espacial: O(1).

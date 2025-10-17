@@ -11,3 +11,5 @@ of time and space complexity. If necessary, you can support your explanation
 with code snippets or mathematical formulas. For guidance on how to write 
 formulas in markdown, refer to https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions.
 -->
+
+Se aplica el algoritmo Dutch National Flag: tres punteros (low, mid, high) para colocar 0s, 1s y 2s en una sola pasada. Complejidad temporal: O(n) y espacial: O(1).

@@ -11,3 +11,5 @@ of time and space complexity. If necessary, you can support your explanation
 with code snippets or mathematical formulas. For guidance on how to write 
 formulas in markdown, refer to https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions.
 -->
+
+Se utiliza un Trie donde cada nodo representa una parte de la ruta (entre barras). El Router divide la ruta en partes con split y delega a la estructura Trie la inserción/búsqueda de handlers. Búsqueda e inserción de rutas toman O(p) tiempo con p el número de segmentos de la ruta. Espacio: proporcional al número de segmentos almacenados.

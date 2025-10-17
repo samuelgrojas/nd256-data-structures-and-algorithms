@@ -11,3 +11,5 @@ of time and space complexity. If necessary, you can support your explanation
 with code snippets or mathematical formulas. For guidance on how to write 
 formulas in markdown, refer to https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions.
 -->
+
+Se recorre el arreglo una sola vez manteniendo mínimo y máximo encontrados hasta el momento. Complejidad temporal: O(n). Complejidad espacial: O(1).
