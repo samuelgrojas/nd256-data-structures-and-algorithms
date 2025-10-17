@@ -20,3 +20,21 @@ Print a message:
 September 2016.".
 """
 
+time_on_phone = {}
+for record in calls:
+    calling_number = record[0]
+    receiving_number = record[1]
+    duration = int(record[3])
+    
+    if calling_number in time_on_phone:
+        time_on_phone[calling_number] += duration
+    else:
+        time_on_phone[calling_number] = duration
+    
+    if receiving_number in time_on_phone:
+        time_on_phone[receiving_number] += duration
+    else:
+        time_on_phone[receiving_number] = duration
+
+print(f"{max(time_on_phone, key=time_on_phone.get)} spent the longest time, {time_on_phone[max(time_on_phone, key=time_on_phone.get)]} seconds, on the phone during September 2016.")
+
